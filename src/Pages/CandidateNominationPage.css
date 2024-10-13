@@ -1,0 +1,198 @@
+/* Base styles */
+.c_candidate-nomination-page {
+    max-width: 600px;
+    margin: 0 auto;min-height: 80vh;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .c_candidate-nomination-page:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .c_form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .c_form h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .c_form input,
+  .c_form select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .c_form input:focus,
+  .c_form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+  }
+  
+  .c_submit-button,
+  .c_back-button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto; /* Changed from 100% to auto */
+  }
+  
+  .c_submit-button {
+    background-color: #3498db;
+    margin-left: auto; /* This pushes the button to the right */
+  }
+  
+  .c_submit-button:hover {
+    background-color: #2980b9;
+    
+  }
+  
+  .c_back-button {
+    background-color: #95a5a6;
+    float: left; /* Added to keep the back button on the left */
+  }
+  
+  .c_back-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .c_popup-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8f6f3;
+    border: 1px solid #a3e4d7;
+    border-radius: 8px;
+    color: #16a085;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .c_popup-message:hover {
+    background-color: #d1f2eb;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .c_candidate-nomination-page {
+      max-width: 100%;
+      padding: 20px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    .c_form h2 {
+      font-size: 24px;
+    }
+  
+    .c_form input,
+    .c_form select {
+      font-size: 14px;
+    }
+  
+    .c_submit-button,
+    .c_back-button {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .c_candidate-nomination-page {
+      padding: 15px;
+    }
+  
+    .c_form h2 {
+      font-size: 22px;
+    }
+  
+    .c_form input,
+    .c_form select {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+  
+    .c_submit-button,
+    .c_back-button {
+      padding: 10px 15px;
+      width: 100%; /* Make buttons full width on very small screens */
+      float: none; /* Remove float on very small screens */
+      margin-bottom: 10px; /* Add some space between buttons */
+    }
+  
+    .c_button-container {
+      flex-direction: column-reverse;
+    }
+  
+    .c_submit-button,
+    .c_back-button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .c_submit-button {
+      margin-left: 0; /* Reset the auto margin for small screens */
+    }
+  }
+  
+  /* Larger screens */
+  @media screen and (min-width: 1200px) {
+    .c_candidate-nomination-page {
+      max-width: 800px;
+    }
+  
+    .c_form h2 {
+      font-size: 32px;
+    }
+  
+    .c_form input,
+    .c_form select {
+      font-size: 18px;
+    }
+  
+    .c_submit-button,
+    .c_back-button {
+      font-size: 18px;
+      padding: 15px 25px;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .c_candidate-nomination-page {
+      box-shadow: none;
+      max-width: 100%;
+    }
+  
+    .c_submit-button,
+    .c_back-button {
+      display: none;
+    }
+  }
+  
+  /* Add this new rule to clear the float */
+  .c_button-container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }

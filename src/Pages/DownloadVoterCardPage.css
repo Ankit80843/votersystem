@@ -1,0 +1,168 @@
+.dvcp-download-voter-card-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  min-height: 80vh;
+ 
+}
+
+.dvcp-input-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  align-items: start;
+
+}
+
+.dvcp-input-section input {
+  padding: 5px;
+  font-size: 16px;
+  width: 200%;
+}
+
+.dvcp-input-section button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dvcp-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+.dvcp-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.dvcp-card {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1; 
+  max-width: 300px;
+  background-color: #f99797;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: scale(1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.dvcp-card-header {
+  display: flex;
+  justify-content: center;
+  gap:7px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dvcp-logo {
+  width: 30px;
+  height: 50px;
+}
+.dvcp-barcode-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.dvcp-header-text h2, .dvcp-header-text h3 {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.dvcp-barcode-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dvcp-barcode {
+  width: 80px;
+  height: 50px;
+}
+
+.dvcp-details-row {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.dvcp-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dvcp-photo-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dvcp-details-row > * {
+  margin-bottom: 2px;
+}
+
+.dvcp-back-footer {
+  font-size: 12px;
+  text-align: center;
+}
+
+.dvcp-download-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dvcp-back img {
+  width: 150px;
+  height: 150px;
+ 
+
+}
+
+@media (max-width: 768px) {
+  .dvcp-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dvcp-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,152 @@
+/* admin.css */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #003d66; /* Darker government color */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 2rem; /* Adjusted font size */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #f2f2f2; /* Lighter color for icon */
+}
+
+.profile-container span {
+    font-size: 1rem; /* Increased font size for better readability */
+    color: #f2f2f2; /* Consistent color */
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 120%; /* Positioning the dropdown below the profile container */
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 150px;
+    z-index: 1000;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.profile-container:hover .profile-dropdown,
+.profile-dropdown:hover {
+    opacity: 1; /* Show when hovering */
+    visibility: visible; /* Show when hovering */
+}
+
+.profile-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.profile-dropdown button:hover {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.admin-content {
+    display: flex;
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .admin-header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .admin-header h1 {
+        font-size: 1.5rem; /* Smaller title font size */
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Full width for title */
+    }
+
+    .profile-container {
+        width: 100%; /* Full width for profile container */
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+   
+
+    .profile-container {
+        padding: 0.5rem; /* Adjust padding */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-header {
+        padding: 0.5rem; /* Adjust header padding */
+    }
+    .profile-container {
+        width: min-content; /* Full width for profile container */
+    }
+}
+
+    .admin-header h1 {
+        font-size: 1.25rem; /* Smaller font size for header */
+    }
+
+    .profile-icon {
+        font-size: 1.25rem; /* Smaller profile icon */
+    }
+
+    .profile-dropdown button {
+        padding: 0.5rem; /* Smaller padding for dropdown buttons */
+        font-size: 0.8rem; /* Smaller font size for buttons */
+    }
+

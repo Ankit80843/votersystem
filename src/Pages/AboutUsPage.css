@@ -1,0 +1,98 @@
+/* Styling for the heading */
+.heading1 {
+    border: 1px solid black;
+    width: 40%;
+    margin: auto;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    height: 5vh;
+    background: #429ce4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.heading p {
+    color: rgb(18, 11, 11);
+    font-size: 1.4rem; /* Adjusted for bigger font size */
+    margin: 0;
+    text-align: center;
+}
+
+/* Styling for text sections */
+.text {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.text h2 {
+    color: #0575E6; /* Blue color for headings */
+    font-size: 1.5rem; /* Adjusted size for headings */
+}
+
+.text p {
+    font-size: 0.9rem; /* Smaller font size for text */
+    line-height: 1.4;
+    font-weight: 300;
+    color:rgb(120, 121, 121)
+}
+
+/* Styling for image layout */
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    justify-content: center;
+}
+
+.img img {
+    width: 100%;
+    max-width: 300px; /* Adjust based on your design needs */
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
+/* Responsive layout for images */
+@media (max-width: 1200px) {
+    .img img {
+        max-width: 200px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .img img {
+        max-width: 150px; /* Adjust for smaller screens */
+    }
+    .heading p{
+font-size: 0.9rem;
+    }
+}
+@media (max-width: 400px) {
+    .img img {
+        max-width: 150px; /* Adjust for smaller screens */
+    }
+    .heading{
+        width: 50%;
+    }
+    .heading p{
+        font-size: 0.5rem;
+            }
+}
+
+/* Flexbox layout for images in rows */
+.img img:nth-child(1) {
+    flex: 0 0 100%;
+}
+
+.img img:nth-child(2),
+.img img:nth-child(3) {
+    flex: 0 0 50%;
+}
+
+.img img:nth-child(4),
+.img img:nth-child(5) {
+    flex: 0 0 33.33%;
+}

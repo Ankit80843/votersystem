@@ -1,9 +1,10 @@
-
-
 import React, { useState, useEffect } from 'react';
-import './Navbar.css'; // Import the external CSS file
+import './Navbar.css'; 
 import { FaHome } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
+import { Link } from 'react-router-dom'; // Import Link for routing
+import AOS from 'aos';
+import { DiVim } from 'react-icons/di';
 
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -21,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    handleResize(); // Set initial state based on window size
+    handleResize(); 
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -33,37 +34,41 @@ const Navbar = () => {
   };
 
   return (
-    <>
+<>
+    
       {isMenuIconVisible && (
-        < TiThMenu  className='menubar' onClick={toggleNav} />
+        <TiThMenu className='menubar' onClick={toggleNav} />
       )}
       <nav className={`navbar ${isNavVisible ? 'show' : 'hide'}`}>
         <ul className="nav-list">
           <li className="dropdown">
-            <a href="#"><FaHome /> Home</a>
+            <Link to="/"><FaHome /> Home</Link>
           </li>
+
           <li className="dropdown">
-            <a href="#">About <span className="dropdown-icon">&#9662;</span></a>
+            <Link to="/about">About <span className="dropdown-icon">&#9662;</span></Link>
             <ul className="dropdown-menu">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Mission</a></li>
-              <li><a href="#">Media Gallery</a></li>
+              <li><Link to="/about/about-us">About Us</Link></li>
+              <li><Link to="/about/mission">Mission</Link></li>
+              <li><Link to="/about/media-gallery">Media Gallery</Link></li>
             </ul>
           </li>
+
           <li className="dropdown">
-            <a href="#">Voter <span className="dropdown-icon">&#9662;</span></a>
+            <Link to="/voter">Voter <span className="dropdown-icon">&#9662;</span></Link>
             <ul className="dropdown-menu">
-              <li><a href="#">Apply New Voter</a></li>
-              <li><a href="#">Track Application</a></li>
-              <li><a href="#">Download Voter Card</a></li>
+              <li><Link to="/voter/apply-new-voter">Apply New Voter</Link></li>
+              <li><Link to="/voter/track-application">Track Application</Link></li>
+              <li><Link to="/voter/download-voter-card">Download Voter Card</Link></li>
             </ul>
           </li>
+
           <li className="dropdown">
-            <a href="#">Political Party/Candidate <span className="dropdown-icon">&#9662;</span></a>
+            <Link to="/political-party">Political Party/Candidate <span className="dropdown-icon">&#9662;</span></Link>
             <ul className="dropdown-menu">
-              <li><a href="#">Political Party Register</a></li>
-              <li><a href="#">Candidate Nomination</a></li>
-              <li><a href="#">View All Parties</a></li>
+              <li><Link to="/political-party/register">Political Party Register</Link></li>
+              <li><Link to="/political-party/candidate-nomination">Candidate Nomination</Link></li>
+              <li><Link to="/political-party/view-all-parties">View All Parties</Link></li>
             </ul>
           </li>
         </ul>
