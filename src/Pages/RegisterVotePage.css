@@ -1,0 +1,150 @@
+/* Main Container */
+.register-vote-container {
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .register-vote-container h1 {
+    color: #125b9a;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  input:focus {
+    border-color: #125b9a;
+    outline: none;
+  }
+  
+  /* Party Selection Box */
+  .party-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .party-option {
+    flex: 1 1 calc(45% - 10px);
+    background: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .party-option.selected {
+    border-color: #125b9a;
+    background-color: #e6f0fa;
+  }
+  
+  .party-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .party-symbol {
+    font-size: 24px;
+  }
+  
+  .party-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .tick-mark {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #125b9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0f4b7a;
+  }
+  
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 10px;
+    color: #125b9a;
+  }
+  
+  .popup-content button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: #125b9a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup
+  

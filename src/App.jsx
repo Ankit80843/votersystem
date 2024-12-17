@@ -18,6 +18,10 @@ import Login from './Components/Home/Login';
 import Sec1 from './Components/Sec1/Sec1';
 import VotionButton from './Components/Main/VotingPortal';
 import ScrollToTop from './Components/ScrollToTop.JSX';
+import RegisterVotePage from './Pages/RegisterVotePage';
+import CastVotePage from './Pages/CastVotePage';
+import TrackVotePage from './Pages/TrackVotePage';
+import ViewResultsPage from './Pages/ViewResultsPage';
 
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
@@ -59,6 +63,11 @@ function App() {
         <Route path="/political-party/candidate-nomination" element={<CandidateNominationPage />} />
         <Route path="/political-party/view-all-parties" element={<ViewAllPartiesPage />} />
 
+        <Route path="/voting-portal/register-vote" element={<RegisterVotePage />} />
+        <Route path="/voting-portal/cast-vote" element={<CastVotePage />} />
+        <Route path="/voting-portal/track-vote" element={<TrackVotePage />} />
+        <Route path="/voting-portal/view-results" element={<ViewResultsPage />} />
+        
         {/* Admin section */}
         <Route 
           path="/admin" 

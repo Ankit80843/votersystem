@@ -1,0 +1,84 @@
+/* Main Container */
+.track-vote-container {
+    max-width: 600px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .track-vote-container h1 {
+    color: #125b9a;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .track-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  input:focus {
+    border-color: #125b9a;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background-color: #125b9a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0f4b7a;
+  }
+  
+  /* Status Box */
+  .status-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f0fa;
+    border: 2px solid #125b9a;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .status-box h2 {
+    margin-bottom: 10px;
+    color: #125b9a;
+  }
+  
+  .status-box p {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

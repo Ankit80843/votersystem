@@ -1,10 +1,12 @@
 /* Container for the boxes */
 .box-container {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 30px 20px;
-  gap: 20px; /* Space between the boxes */
+   /* Space between the boxes */
+   gap:50px;
 }
 
 /* Wrapper for each box */
